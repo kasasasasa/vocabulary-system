@@ -99,3 +99,16 @@ likewise,同样地
 northward,向北地
 forward,向前地
 backward,向后地
+unorganized,未经整理的
+glance,瞥见
+detail,细节
+reveiew,复习
+prompt,提示
+each,线索
+highlight,强调
+connect,连接
+bullet,子弹
+outline,大纲
+jot,记录
+row,行
+determine,判别
