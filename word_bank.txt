@@ -112,3 +112,17 @@ outline,大纲
 jot,记录
 row,行
 determine,判别
+acknowledge,承认
+certificates,证书
+connect,连接
+demonstrates,演示
+establish,建立
+format,格式
+measured,测量
+narrow,狭窄
+permanent,永久
+produces,生产
+ranging,范围
+relative,相对
+submit,提交
+target,目标
