@@ -133,3 +133,4 @@ genre,体裁
 rhythm,节奏
 ruin,毁掉
 flow,流动、节奏
+clinic,诊所
