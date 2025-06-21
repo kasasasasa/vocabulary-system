@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日背单词系统</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content {
+            padding: 30px;
+            min-height: 400px;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(37, 117, 252, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: #f1f4f8;
+            color: #2575fc;
+            box-shadow: none;
+        }
+
+        .btn-secondary:hover {
+            background: #e4eaf3;
+        }
+
+        .word-display {
+            text-align: center;
+            padding: 40px 20px;
+            margin: 30px 0;
+        }
+
+        .word {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .meaning {
+            font-size: 1.8rem;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            min-height: 60px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #e0e6ed;
+            border-radius: 4px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .btn-know {
+            background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+            box-shadow: 0 4px 10px rgba(0, 176, 155, 0.3);
+        }
+
+        .btn-dont-know {
+            background: linear-gradient(135deg, #ff416c 0%, #ff4b2b 100%);
+            box-shadow: 0 4px 10px rgba(255, 65, 108, 0.3);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .stat-item {
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2575fc;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .review-list {
+            background: #f8f9fb;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        .review-list h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .word-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .word-item {
+            background: white;
+            border: 1px solid #e0e6ed;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-weight: 500;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .message {
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+
+        .status {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            .word {
+                font-size: 2.5rem;
+            }
+
+            .meaning {
+                font-size: 1.4rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="status" id="date-display">2025年6月20日</div>
+            <h1>每日背单词系统</h1>
+            <p>每天学习20个新单词，坚持就是胜利！</p>
+        </header>
+
+        <div class="content">
+            <!-- 首页 -->
+            <div id="home-page" class="page active">
+                <div class="card">
+                    <h2>今日学习状态</h2>
+                    <p id="learning-status">正在加载学习状态...</p>
+
+                    <div class="progress-bar">
+                        <div class="progress" id="progress-bar" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0/0 单词</div>
+                </div>
+
+                <div class="card">
+                    <h2>开始学习</h2>
+                    <p>准备好开始今天的单词学习了吗？点击下方按钮开始吧！</p>
+                    <div style="text-align: center; margin-top: 25px;">
+                        <button id="start-learning" class="btn">开始学习</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 学习页面 -->
+            <div id="learning-page" class="page">
+                <div class="word-display">
+                    <div class="word" id="current-word">Loading...</div>
+                    <div class="meaning" id="word-meaning">点击显示释义</div>
+
+                    <div class="action-buttons">
+                        <button id="show-meaning" class="btn">显示释义</button>
+                        <button id="mark-known" class="btn btn-know hidden">记住了</button>
+                        <button id="mark-unknown" class="btn btn-dont-know hidden">没记住</button>
+                    </div>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress" id="learning-progress" style="width: 0%"></div>
+                </div>
+                <div class="progress-text" id="learning-progress-text">0/0 单词</div>
+            </div>
+
+            <!-- 结果页面 -->
+            <div id="result-page" class="page">
+                <div class="message">
+                    <h2>今日学习完成!</h2>
+                    <p>恭喜你完成了今日的学习任务！</p>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="total-words">0</div>
+                        <div class="stat-label">今日学习</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="known-words">0</div>
+                        <div class="stat-label">已掌握</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="unknown-words">0</div>
+                        <div class="stat-label">需复习</div>
+                    </div>
+                </div>
+
+                <div class="review-list" id="review-section">
+                    <h3>需要复习的单词</h3>
+                    <div class="word-list" id="unknown-words-list">
+                        <!-- 未掌握单词列表 -->
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <button id="back-to-home" class="btn">返回首页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 学习状态数据
+        let learningData = {
+            date: new Date().toISOString().split('T')[0],
+            dailyWords: 20,
+            words: [],
+            currentIndex: 0,
+            knownWords: 0,
+            unknownWords: []
+        };
+
+        // DOM元素
+        const pages = {
+            home: document.getElementById('home-page'),
+            learning: document.getElementById('learning-page'),
+            result: document.getElementById('result-page')
+        };
+
+        const homeElements = {
+            status: document.getElementById('learning-status'),
+            progressBar: document.getElementById('progress-bar'),
+            progressText: document.getElementById('progress-text'),
+            startButton: document.getElementById('start-learning')
+        };
+
+        const learningElements = {
+            word: document.getElementById('current-word'),
+            meaning: document.getElementById('word-meaning'),
+            showMeaningBtn: document.getElementById('show-meaning'),
+            markKnownBtn: document.getElementById('mark-known'),
+            markUnknownBtn: document.getElementById('mark-unknown'),
+            progressBar: document.getElementById('learning-progress'),
+            progressText: document.getElementById('learning-progress-text')
+        };
+
+        const resultElements = {
+            totalWords: document.getElementById('total-words'),
+            knownWords: document.getElementById('known-words'),
+            unknownWords: document.getElementById('unknown-words'),
+            unknownList: document.getElementById('unknown-words-list'),
+            backButton: document.getElementById('back-to-home'),
+            reviewSection: document.getElementById('review-section')
+        };
+
+        // 初始化应用
+        function initApp() {
+            // 设置当前日期
+            const now = new Date();
+            const dateString = `${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日`;
+            document.getElementById('date-display').textContent = dateString;
+
+            // 获取用户学习状态
+            fetch('/check-learned')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.learned) {
+                        homeElements.status.textContent = "您今天已经完成了学习任务！";
+                        homeElements.progressBar.style.width = "100%";
+                        homeElements.progressText.textContent = `${learningData.dailyWords}/${learningData.dailyWords} 单词`;
+                    } else {
+                        homeElements.status.textContent = "今日尚未开始学习";
+                        homeElements.progressBar.style.width = "0%";
+                        homeElements.progressText.textContent = "0/20 单词";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching learned status:', error);
+                    homeElements.status.textContent = "获取学习状态失败";
+                });
+
+            // 绑定事件
+            homeElements.startButton.addEventListener('click', startLearning);
+            learningElements.showMeaningBtn.addEventListener('click', showMeaning);
+            learningElements.markKnownBtn.addEventListener('click', () => markWord(true));
+            learningElements.markUnknownBtn.addEventListener('click', () => markWord(false));
+            resultElements.backButton.addEventListener('click', backToHome);
+        }
+
+        // 开始学习
+        function startLearning() {
+            // 检查今日是否已学习
+            fetch('/check-learned')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.learned) {
+                        alert("您今天已经完成了学习任务！");
+                        return;
+                    }
+
+                    // 获取今日学习单词
+                    return fetch('/get-today-words')
+                        .then(response => response.json());
+                })
+                .then(data => {
+                    if (Array.isArray(data.words)) {
+                        learningData.words = data.words;
+                        learningData.currentIndex = 0;
+                        learningData.knownWords = 0;
+                        learningData.unknownWords = [];
+
+                        showPage('learning');
+                        loadNextWord();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error starting learning:', error);
+                    alert("获取学习单词失败，请稍后重试！");
+                });
+        }
+
+        // 显示页面
+        function showPage(pageName) {
+            Object.values(pages).forEach(page => page.classList.remove('active'));
+            pages[pageName].classList.add('active');
+        }
+
+        // 加载下一个单词
+        function loadNextWord() {
+            if (learningData.currentIndex >= learningData.words.length) {
+                finishLearning();
+                return;
+            }
+
+            const word = learningData.words[learningData.currentIndex];
+            learningElements.word.textContent = word.word;
+            learningElements.meaning.textContent = "点击显示释义";
+            learningElements.showMeaningBtn.classList.remove('hidden');
+            learningElements.markKnownBtn.classList.add('hidden');
+            learningElements.markUnknownBtn.classList.add('hidden');
+
+            // 更新进度
+            const progress = (learningData.currentIndex / learningData.words.length) * 100;
+            learningElements.progressBar.style.width = `${progress}%`;
+            learningElements.progressText.textContent =
+                `${learningData.currentIndex + 1}/${learningData.words.length} 单词`;
+        }
+
+        // 显示单词释义
+        function showMeaning() {
+            const word = learningData.words[learningData.currentIndex];
+            learningElements.meaning.textContent = word.meaning;
+            learningElements.showMeaningBtn.classList.add('hidden');
+            learningElements.markKnownBtn.classList.remove('hidden');
+            learningElements.markUnknownBtn.classList.remove('hidden');
+        }
+
+        // 标记单词掌握情况
+        function markWord(isKnown) {
+            const word = learningData.words[learningData.currentIndex];
+
+            if (isKnown) {
+                learningData.knownWords++;
+            } else {
+                learningData.unknownWords.push(word.word);
+            }
+
+            // 发送掌握情况到后端
+            fetch('/update-progress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    word: word.word,
+                    learned: isKnown,
+                    date: learningData.date
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // 继续下一个单词
+                learningData.currentIndex++;
+                loadNextWord();
+            })
+            .catch(error => {
+                console.error('Error updating progress:', error);
+                // 即使后端保存失败，也继续学习流程
+                learningData.currentIndex++;
+                loadNextWord();
+            });
+        }
+
+        // 完成学习
+        function finishLearning() {
+            // 更新结果页面
+            resultElements.totalWords.textContent = learningData.words.length;
+            resultElements.knownWords.textContent = learningData.knownWords;
+            resultElements.unknownWords.textContent = learningData.unknownWords.length;
+
+            // 更新未掌握单词列表
+            resultElements.unknownList.innerHTML = '';
+            learningData.unknownWords.forEach(word => {
+                const wordItem = document.createElement('div');
+                wordItem.className = 'word-item';
+                wordItem.textContent = word;
+                resultElements.unknownList.appendChild(wordItem);
+            });
+
+            // 如果没有需要复习的单词，隐藏复习部分
+            if (learningData.unknownWords.length === 0) {
+                resultElements.reviewSection.style.display = 'none';
+            } else {
+                resultElements.reviewSection.style.display = 'block';
+            }
+
+            // 保存学习进度到后端
+            fetch('/save-progress', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    date: learningData.date,
+                    totalWords: learningData.words.length,
+                    knownWords: learningData.knownWords,
+                    unknownWords: learningData.unknownWords
+                })
+            })
+            .catch(error => {
+                console.error('Error saving progress:', error);
+            });
+
+            showPage('result');
+        }
+
+        // 返回首页
+        function backToHome() {
+            initApp();
+        }
+
+        // 页面加载完成后初始化
+        window.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
