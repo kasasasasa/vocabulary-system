@@ -363,6 +363,159 @@
       "northward",
       "pleasant",
       "invasive"
+    ],
+    "2025-06-22": [
+      "kilometer",
+      "enlarge",
+      "confident",
+      "millimeter",
+      "antibiotic",
+      "scenery",
+      "ranging",
+      "illogical",
+      "immature",
+      "improvement",
+      "acknowledge",
+      "energise",
+      "civilize",
+      "misplace",
+      "Canadian",
+      "adventurous",
+      "wearisome",
+      "positive",
+      "employee",
+      "likewise"
+    ]
+  },
+  "daily_progress": {
+    "2025-06-22": {
+      "total": 20,
+      "known": 19,
+      "unknown": [
+        "wearisome"
+      ]
+    }
+  },
+  "word_progress": {
+    "kilometer": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "enlarge": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "confident": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "millimeter": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "antibiotic": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "scenery": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "ranging": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "illogical": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "immature": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "improvement": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "acknowledge": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "energise": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "civilize": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "misplace": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "Canadian": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "adventurous": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "wearisome": [
+      {
+        "date": "2025-06-22",
+        "learned": false
+      }
+    ],
+    "positive": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "employee": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "likewise": [
+      {
+        "date": "2025-06-22",
+        "learned": true
+      }
     ]
   }
 }
