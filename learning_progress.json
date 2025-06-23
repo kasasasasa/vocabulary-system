@@ -385,14 +385,37 @@
       "positive",
       "employee",
       "likewise"
+    ],
+    "2025-06-23": [
+      "interact",
+      "enlarge",
+      "antidote",
+      "scenery",
+      "conductor",
+      "sadness",
+      "childlike",
+      "selfish",
+      "submarine",
+      "business-like",
+      "malign",
+      "invasive",
+      "micro-organism",
+      "misplace",
+      "brotherhood",
+      "neighbourhood",
+      "edible",
+      "confident",
+      "illogical",
+      "bullet"
     ]
   },
   "daily_progress": {
-    "2025-06-22": {
+    "2025-06-23": {
       "total": 20,
-      "known": 19,
+      "known": 18,
       "unknown": [
-        "wearisome"
+        "interact",
+        "edible"
       ]
     }
   },
@@ -407,11 +430,19 @@
       {
         "date": "2025-06-22",
         "learned": true
+      },
+      {
+        "date": "2025-06-23",
+        "learned": true
       }
     ],
     "confident": [
       {
         "date": "2025-06-22",
+        "learned": true
+      },
+      {
+        "date": "2025-06-23",
         "learned": true
       }
     ],
@@ -431,6 +462,10 @@
       {
         "date": "2025-06-22",
         "learned": true
+      },
+      {
+        "date": "2025-06-23",
+        "learned": true
       }
     ],
     "ranging": [
@@ -442,6 +477,10 @@
     "illogical": [
       {
         "date": "2025-06-22",
+        "learned": true
+      },
+      {
+        "date": "2025-06-23",
         "learned": true
       }
     ],
@@ -479,6 +518,10 @@
       {
         "date": "2025-06-22",
         "learned": true
+      },
+      {
+        "date": "2025-06-23",
+        "learned": true
       }
     ],
     "Canadian": [
@@ -514,6 +557,96 @@
     "likewise": [
       {
         "date": "2025-06-22",
+        "learned": true
+      }
+    ],
+    "interact": [
+      {
+        "date": "2025-06-23",
+        "learned": false
+      }
+    ],
+    "antidote": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "conductor": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "sadness": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "childlike": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "selfish": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "submarine": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "business-like": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "malign": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "invasive": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "micro-organism": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "brotherhood": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "neighbourhood": [
+      {
+        "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "edible": [
+      {
+        "date": "2025-06-23",
+        "learned": false
+      }
+    ],
+    "bullet": [
+      {
+        "date": "2025-06-23",
         "learned": true
       }
     ]
