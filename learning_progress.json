@@ -429,15 +429,35 @@
       "noncommunicable",
       "forewarn",
       "adorable"
+    ],
+    "2025-06-26": [
+      "decade",
+      "backward",
+      "determine",
+      "submarine",
+      "socialism",
+      "malign",
+      "otherwise",
+      "detail",
+      "harmful",
+      "sadness",
+      "relative",
+      "terrible",
+      "friendship",
+      "centimetre",
+      "experience",
+      "collectivism",
+      "individualism",
+      "widen",
+      "likewise",
+      "underplay"
     ]
   },
   "daily_progress": {
     "2025-06-25": {
-      "total": 20,
-      "known": 19,
-      "unknown": [
-        "permanent"
-      ]
+      "total": 0,
+      "known": 0,
+      "unknown": []
     }
   },
   "word_progress": {
@@ -587,6 +607,10 @@
       {
         "date": "2025-06-22",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "interact": [
@@ -611,6 +635,10 @@
       {
         "date": "2025-06-23",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "childlike": [
@@ -633,6 +661,10 @@
       {
         "date": "2025-06-23",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "business-like": [
@@ -644,6 +676,10 @@
     "malign": [
       {
         "date": "2025-06-23",
+        "learned": true
+      },
+      {
+        "date": "2025-06-25",
         "learned": true
       }
     ],
@@ -687,6 +723,10 @@
       {
         "date": "2025-06-25",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "highlight": [
@@ -714,6 +754,10 @@
       }
     ],
     "detail": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      },
       {
         "date": "2025-06-25",
         "learned": true
@@ -759,6 +803,10 @@
       {
         "date": "2025-06-25",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "novelist": [
@@ -780,6 +828,84 @@
       }
     ],
     "adorable": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "decade": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "backward": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "determine": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "otherwise": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "harmful": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "relative": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "terrible": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "friendship": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "centimetre": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "collectivism": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "individualism": [
+      {
+        "date": "2025-06-25",
+        "learned": false
+      }
+    ],
+    "widen": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "underplay": [
       {
         "date": "2025-06-25",
         "learned": true
