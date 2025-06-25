@@ -407,15 +407,36 @@
       "confident",
       "illogical",
       "bullet"
+    ],
+    "2025-06-25": [
+      "experience",
+      "highlight",
+      "Canadian",
+      "monorail",
+      "malpractice",
+      "permanent",
+      "detail",
+      "endanger",
+      "immoral",
+      "prelude",
+      "selfish",
+      "confidence",
+      "painter",
+      "each",
+      "socialism",
+      "scenery",
+      "novelist",
+      "noncommunicable",
+      "forewarn",
+      "adorable"
     ]
   },
   "daily_progress": {
-    "2025-06-23": {
+    "2025-06-25": {
       "total": 20,
-      "known": 18,
+      "known": 19,
       "unknown": [
-        "interact",
-        "edible"
+        "permanent"
       ]
     }
   },
@@ -465,6 +486,10 @@
       },
       {
         "date": "2025-06-23",
+        "learned": true
+      },
+      {
+        "date": "2025-06-25",
         "learned": true
       }
     ],
@@ -527,6 +552,10 @@
     "Canadian": [
       {
         "date": "2025-06-22",
+        "learned": true
+      },
+      {
+        "date": "2025-06-25",
         "learned": true
       }
     ],
@@ -594,6 +623,10 @@
       {
         "date": "2025-06-23",
         "learned": true
+      },
+      {
+        "date": "2025-06-25",
+        "learned": true
       }
     ],
     "submarine": [
@@ -647,6 +680,108 @@
     "bullet": [
       {
         "date": "2025-06-23",
+        "learned": true
+      }
+    ],
+    "experience": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "highlight": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "monorail": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "malpractice": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "permanent": [
+      {
+        "date": "2025-06-25",
+        "learned": false
+      }
+    ],
+    "detail": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "endanger": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "immoral": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "prelude": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "confidence": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "painter": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "each": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "socialism": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "novelist": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "noncommunicable": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "forewarn": [
+      {
+        "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "adorable": [
+      {
+        "date": "2025-06-25",
         "learned": true
       }
     ]
