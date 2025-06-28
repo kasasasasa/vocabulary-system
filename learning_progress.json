@@ -451,12 +451,56 @@
       "widen",
       "likewise",
       "underplay"
+    ],
+    "2025-06-27": [
+      "energise",
+      "decentralize",
+      "genre",
+      "malpractice",
+      "election",
+      "individualism",
+      "detail",
+      "monorail",
+      "adorable",
+      "conductor",
+      "collectivism",
+      "painter",
+      "confident",
+      "repick",
+      "invasive",
+      "forewarn",
+      "jot",
+      "reproduce",
+      "connect",
+      "misplace"
+    ],
+    "2025-06-28": [
+      "scenery",
+      "hypertension",
+      "widen",
+      "jot",
+      "freedom",
+      "methodical",
+      "hopeless",
+      "closure",
+      "invasive",
+      "connect",
+      "quickly",
+      "measured",
+      "monopoly",
+      "novelist",
+      "prompt",
+      "repick",
+      "communism",
+      "selfish",
+      "misplace",
+      "bullet"
     ]
   },
   "daily_progress": {
-    "2025-06-25": {
-      "total": 0,
-      "known": 0,
+    "2025-06-28": {
+      "total": 20,
+      "known": 20,
       "unknown": []
     }
   },
@@ -510,6 +554,10 @@
       },
       {
         "date": "2025-06-25",
+        "learned": true
+      },
+      {
+        "date": "2025-06-28",
         "learned": true
       }
     ],
@@ -566,6 +614,10 @@
       },
       {
         "date": "2025-06-23",
+        "learned": true
+      },
+      {
+        "date": "2025-06-28",
         "learned": true
       }
     ],
@@ -655,6 +707,10 @@
       {
         "date": "2025-06-25",
         "learned": true
+      },
+      {
+        "date": "2025-06-28",
+        "learned": true
       }
     ],
     "submarine": [
@@ -687,6 +743,10 @@
       {
         "date": "2025-06-23",
         "learned": true
+      },
+      {
+        "date": "2025-06-28",
+        "learned": true
       }
     ],
     "micro-organism": [
@@ -716,6 +776,10 @@
     "bullet": [
       {
         "date": "2025-06-23",
+        "learned": true
+      },
+      {
+        "date": "2025-06-28",
         "learned": true
       }
     ],
@@ -813,6 +877,10 @@
       {
         "date": "2025-06-25",
         "learned": true
+      },
+      {
+        "date": "2025-06-28",
+        "learned": true
       }
     ],
     "noncommunicable": [
@@ -903,11 +971,93 @@
       {
         "date": "2025-06-25",
         "learned": true
+      },
+      {
+        "date": "2025-06-28",
+        "learned": true
       }
     ],
     "underplay": [
       {
         "date": "2025-06-25",
+        "learned": true
+      }
+    ],
+    "hypertension": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "jot": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "freedom": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "methodical": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "hopeless": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "closure": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "connect": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "quickly": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "measured": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "monopoly": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "prompt": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "repick": [
+      {
+        "date": "2025-06-28",
+        "learned": true
+      }
+    ],
+    "communism": [
+      {
+        "date": "2025-06-28",
         "learned": true
       }
     ]
